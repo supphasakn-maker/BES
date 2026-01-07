@@ -2,4 +2,6 @@ config/
 binary/
 css/
 font/
-img/
+img/db/erp_main.sql
+git.sh
+canclegit.sh
