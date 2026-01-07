@@ -1,0 +1,131 @@
+      <form>
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="card">
+              <div class="card-body">
+                <div class="form-group">
+                  <label for="blogTitle">Title</label>
+                  <input type="text" class="form-control" id="blogTitle" autofocus autocomplete="off">
+                </div>
+                <div class="form-group">
+                  <label>Content</label>
+                  <textarea class="form-control summernote"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 mt-3 mt-lg-0">
+            <div class="card">
+              <div class="card-body">
+                <div class="form-group">
+                  <label for="blogLabels">Labels</label>
+                  <select class="form-control select2" multiple data-placeholder="Tags" data-tags="true" id="blogLabels">
+                    <option>api</option>
+                    <option>auth</option>
+                    <option>form</option>
+                    <option>get-started</option>
+                    <option>jamstack</option>
+                    <option>javascript</option>
+                    <option>jwt</option>
+                    <option>promise</option>
+                    <option>react</option>
+                    <option>react-native</option>
+                    <option>react-redux</option>
+                    <option>react-router</option>
+                    <option>scroll</option>
+                    <option>validation</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Published on</label>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="customRadio1" name="blogPublished" class="custom-control-input" data-toggle="collapse" data-target=".inline-datepicker" checked>
+                    <label class="custom-control-label" for="customRadio1">Automatic</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="customRadio2" name="blogPublished" class="custom-control-input" data-toggle="collapse" data-target=".inline-datepicker">
+                    <label class="custom-control-label" for="customRadio2">Set date and time</label>
+                  </div>
+                  <div class="collapse inline-datepicker">
+                    <input type="text" class="form-control datetimepicker-inline" placeholder="Choose date" style="width:254px">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Permalink</label>
+                  <div class="collapse input-permalink show">
+                    <input type="text" class="permalink-value form-control-plaintext text-muted" value="http://example.com/blog-title.html" disabled>
+                  </div>
+                  <div class="collapse input-permalink">
+                    <input type="text" class="permalink-value form-control" value="http://example.com/blog-title.html">
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="customRadio3" name="blogPermalink" class="custom-control-input" data-toggle="collapse" data-target=".input-permalink" checked>
+                    <label class="custom-control-label" for="customRadio3">Automatic permalink</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="customRadio4" name="blogPermalink" class="custom-control-input" data-toggle="collapse" data-target=".input-permalink">
+                    <label class="custom-control-label" for="customRadio4">Custom permalink</label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Reader comments</label>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="customRadio5" name="blogComments" class="custom-control-input" checked>
+                    <label class="custom-control-label" for="customRadio5">Allow</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="customRadio6" name="blogComments" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadio6">Do not allow, show existing</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="customRadio7" name="blogComments" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadio7">Do not allow, hide existing</label>
+                  </div>
+                </div>
+                <div class="btn-group btn-group-sm w-100 mb-1">
+                  <button class="btn has-icon btn-light justify-content-center" type="button"><i class="mr-1" data-feather="save"></i>Save</button>
+                  <button class="btn has-icon btn-light justify-content-center" type="button"><i class="mr-1" data-feather="eye"></i>Preview</button>
+                </div>
+                <button class="btn has-icon btn-block btn-primary" type="button">Publish<i class="ml-1" data-feather="arrow-right"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <script>
+        var plugins = [
+          'plugins/summernote/summernote-bs4.css',
+          'plugins/summernote/summernote-bs4.min.js',
+          'plugins/select2/css/select2.min.css',
+          'plugins/select2/js/select2.min.js',
+          'plugins/flatpickr/flatpickr.min.css',
+          'plugins/flatpickr/flatpickr.min.js',
+          'plugins/slugify/slugify.min.js',
+        ]
+        App.loadPlugins(plugins, null).then(() => {
+          $('.summernote').summernote({
+            height: 306
+          })
+
+          App.select2()
+
+          flatpickr('.datetimepicker-inline', {
+            enableTime: true,
+            inline: true
+          })
+
+          document.getElementById('blogTitle').addEventListener('input', function() {
+            let permalink = 'blog-title'
+            if (this.value != '') {
+              permalink = slugify(this.value, {
+                remove: /[*+~.()'"!:@,]/g, // remove symbols
+                lower: true // convert to lowercase
+              })
+            }
+            permalink = `http://example.com/${permalink}.html`;
+            [...document.querySelectorAll('.permalink-value')].map(el => el.value = permalink)
+          })
+
+        }).then(() => App.stopLoading())
+      </script>

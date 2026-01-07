@@ -1,0 +1,314 @@
+      <div class="row">
+        <div class="col">
+
+          <div class="card">
+            <div class="card-body">
+              <section id="section1">
+                <h5>Basic usage</h5>
+                <p class="text-muted font-size-sm">
+                  Select2 gives you a customizable select box with support for searching, tagging, remote data sets, infinite scrolling, and many other highly used options.
+                </p>
+                <div class="row">
+                  <div class="col-sm-6 mb-1">
+                    <select class="form-control select2">
+                      <option value="1">Firefox</option>
+                      <option value="2">Chrome</option>
+                      <option value="3">Safari</option>
+                      <option value="4">Opera</option>
+                      <option value="5">Edge</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-6 mb-1">
+                    <select class="form-control select2" disabled>
+                      <option value="1">Firefox</option>
+                      <option value="2">Chrome</option>
+                      <option value="3">Safari</option>
+                      <option value="4">Opera</option>
+                      <option value="5">Edge</option>
+                    </select>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <div class="card mt-5">
+            <div class="card-body">
+              <section id="section2">
+                <h5>With placeholder</h5>
+                <p class="text-muted font-size-sm">
+                  Select2 supports displaying a placeholder value using the <code>data-placeholder</code> attribute. The placeholder value will be displayed until a selection is made.
+                </p>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <select class="form-control select2" data-placeholder="Choose browser">
+                      <option></option>
+                      <option value="1">Firefox</option>
+                      <option value="2">Chrome</option>
+                      <option value="4">Safari</option>
+                      <option value="5">Opera</option>
+                      <option value="6">Edge</option>
+                    </select>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <div class="card mt-5">
+            <div class="card-body">
+              <section id="section3">
+                <h5>With optgroups</h5>
+                <p class="text-muted font-size-sm">
+                  Select2 support group related options with <code>&lt;optgroup&gt;</code> tags
+                </p>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <select class="form-control select2">
+                      <optgroup label="Swedish Cars">
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                      </optgroup>
+                      <optgroup label="German Cars">
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                      </optgroup>
+                    </select>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <div class="card mt-5">
+            <div class="card-body">
+              <section id="section4">
+                <h5>Multiple select boxes</h5>
+                <p class="text-muted font-size-sm">
+                  Select2 also supports multi-value select boxes. The select below is declared with the <code>multiple</code> attribute.
+                </p>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <select class="form-control select2" multiple data-placeholder="Choose browsers">
+                      <option value="1" selected>Firefox</option>
+                      <option value="2" selected>Chrome</option>
+                      <option value="4" selected>Safari</option>
+                      <option value="5">Opera</option>
+                      <option value="6">Edge</option>
+                    </select>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <div class="card mt-5">
+            <div class="card-body">
+              <section id="section5">
+                <h5>Limit selection</h5>
+                <p class="text-muted font-size-sm">
+                  Limit the number of options that can be selected via the <code>data-maximum-selection-length</code> attribute.
+                </p>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <select class="form-control select2" data-placeholder="Choose supported browsers" multiple data-maximum-selection-length="2">
+                      <option value="1">Firefox</option>
+                      <option value="2">Chrome</option>
+                      <option value="4">Safari</option>
+                      <option value="5">Opera</option>
+                      <option value="6">Edge</option>
+                    </select>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <div class="card mt-5">
+            <div class="card-body">
+              <section id="section6">
+                <h5>Live search</h5>
+                <p class="text-muted font-size-sm">
+                  You can add a search input by passing <code>data-select2-search="true"</code> attribute.
+                </p>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <select class="form-control select2" data-select2-search="true" data-placeholder="Choose browser">
+                      <option></option>
+                      <option value="1">Firefox</option>
+                      <option value="2">Chrome</option>
+                      <option value="4">Safari</option>
+                      <option value="5">Opera</option>
+                      <option value="6">Edge</option>
+                    </select>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <div class="card mt-5">
+            <div class="card-body">
+              <section id="section7">
+                <h5>Creatable</h5>
+                <p class="text-muted font-size-sm">
+                  In addition to a prepopulated menu of options, Select2 can dynamically create new options from text input by the user in the search box. This feature is called "tagging". To enable tagging, set the <code>data-tags</code> attribute to <code>true</code>.
+                </p>
+                <div class="row">
+                  <div class="col-sm-6 mb-1">
+                    <select class="form-control select2" data-select2-search="true" data-placeholder="Find Microsoft's browser" data-tags="true">
+                      <option></option>
+                      <option>Firefox</option>
+                      <option>Chrome</option>
+                      <option>Safari</option>
+                      <option>Opera</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-6 mb-1">
+                    <select class="form-control select2" multiple data-placeholder="Tags" data-tags="true">
+                      <option>Amsterdam</option>
+                      <option>Washington</option>
+                      <option>Sydney</option>
+                      <option>Beijing</option>
+                      <option>Cairo</option>
+                    </select>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <div class="card mt-5">
+            <div class="card-body">
+              <section id="section8">
+                <h5>Custom content</h5>
+                <p class="text-muted font-size-sm">
+                  To enable custom content, set the <code>data-select2-content</code> attribute to <code>true.</code><br />
+                  Insert custom HTML into the option with the <code>data-content</code> attribute.
+                </p>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <select class="form-control select2" data-select2-content="true">
+                      <option value="1" data-content="<div class='d-flex align-items-center'><img src='dist/img/user1.svg' class='rounded-circle mr-2' width='30'> Socrates Itumay</div>">Socrates Itumay</option>
+                      <option value="2" data-content="<div class='d-flex align-items-center'><img src='dist/img/user2.svg' class='rounded-circle mr-2' width='30'> Reynante Labares</div>">Reynante Labares</option>
+                      <option value="3" data-content="<div class='d-flex align-items-center'><img src='dist/img/user3.svg' class='rounded-circle mr-2' width='30'> Marianne Audrey</div>">Marianne Audrey</option>
+                    </select>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <div class="card mt-5">
+            <div class="card-body">
+              <section id="section9">
+                <h5>Sizing</h5>
+                <p class="text-muted font-size-sm">
+                  Set size with <code>data-select2-size</code> attribute.
+                </p>
+                <div class="row">
+                  <div class="col-sm-6 mb-1">
+                    <select class="form-control select2" data-select2-size="sm">
+                      <option value="1">Firefox</option>
+                      <option value="2">Chrome</option>
+                      <option value="3">Safari</option>
+                      <option value="4">Opera</option>
+                      <option value="5">Edge</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-6 mb-1">
+                    <select class="form-control select2" data-select2-size="sm" disabled>
+                      <option value="1">Firefox</option>
+                      <option value="2">Chrome</option>
+                      <option value="3">Safari</option>
+                      <option value="4">Opera</option>
+                      <option value="5">Edge</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-6 mb-1">
+                    <select class="form-control select2" data-select2-size="lg">
+                      <option value="1">Firefox</option>
+                      <option value="2">Chrome</option>
+                      <option value="3">Safari</option>
+                      <option value="4">Opera</option>
+                      <option value="5">Edge</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-6 mb-1">
+                    <select class="form-control select2" data-select2-size="lg" disabled>
+                      <option value="1">Firefox</option>
+                      <option value="2">Chrome</option>
+                      <option value="3">Safari</option>
+                      <option value="4">Opera</option>
+                      <option value="5">Edge</option>
+                    </select>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <div class="card mt-5">
+            <div class="card-body">
+              <section id="section10">
+                <h5>Clearable</h5>
+                <p class="text-muted font-size-sm">
+                  Add a clear button ("x" icon) to appear on the select box when a value is selected. Clicking the clear button will clear the selected value, effectively resetting the select box back to its placeholder value.
+                </p>
+                <div class="row">
+                  <div class="col-sm-6 mb-1">
+                    <select class="form-control select2" data-placeholder="Choose browser" data-allow-clear="true">
+                      <option></option>
+                      <option value="1">Firefox</option>
+                      <option value="2">Chrome</option>
+                      <option value="4">Safari</option>
+                      <option value="5">Opera</option>
+                      <option value="6">Edge</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-6 mb-1">
+                    <select class="form-control select2" data-placeholder="Choose browser" data-allow-clear="true">
+                      <option></option>
+                      <option value="1">Firefox</option>
+                      <option value="2" selected>Chrome</option>
+                      <option value="4">Safari</option>
+                      <option value="5">Opera</option>
+                      <option value="6">Edge</option>
+                    </select>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-3 d-none d-xl-block">
+          <div class="nav-section">
+            <label class="text-muted">On This Page</label>
+            <nav id="navSection" class="nav flex-column">
+              <a href="#section1" class="nav-link nav-link-sm">Basic usage</a>
+              <a href="#section2" class="nav-link nav-link-sm">With placeholder</a>
+              <a href="#section3" class="nav-link nav-link-sm">With optgroups</a>
+              <a href="#section4" class="nav-link nav-link-sm">Multiple select boxes</a>
+              <a href="#section5" class="nav-link nav-link-sm">Limit selection</a>
+              <a href="#section6" class="nav-link nav-link-sm">Live search</a>
+              <a href="#section7" class="nav-link nav-link-sm">Creatable</a>
+              <a href="#section8" class="nav-link nav-link-sm">Custom content</a>
+              <a href="#section9" class="nav-link nav-link-sm">Sizing</a>
+              <a href="#section10" class="nav-link nav-link-sm">Clearable</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        var plugins = [
+          'plugins/select2/css/select2.min.css',
+          'plugins/select2/js/select2.min.js',
+        ]
+        App.loadPlugins(plugins, null).then(() => {
+          App.select2()
+
+        }).then(() => App.stopLoading())
+      </script>

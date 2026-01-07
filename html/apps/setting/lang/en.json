@@ -1,0 +1,15 @@
+{
+	"general" : {
+		"home" : "Home",
+		"setting" : "Setting",
+		"overview" : "Overview",
+		"my_profile" : "My Profile",
+		"my_company" : "My Company",
+		"system" : "System"
+	},
+	"overview" : {
+		"code_name" : "Code Name",
+		"version" : "Version",
+		"license" : "License"
+	}
+}

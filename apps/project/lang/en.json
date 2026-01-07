@@ -1,0 +1,9 @@
+{
+	"main" : {
+		"breadcrumb" : {
+			"home" : "Home",
+			"profile" : "Profile"
+		},
+		"header" : "Profile Setting"
+	}
+}

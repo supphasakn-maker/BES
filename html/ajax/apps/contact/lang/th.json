@@ -1,0 +1,50 @@
+{
+    "main": {
+        "organization": "องค์กร",
+        "customer": "ลูกค้า",
+        "supplier": "ผู้ผลิต",
+        "employee": "พนักงาน",
+        "contact": "ติดต่อ"
+    },
+    "organization": {
+        "organization": "องค์กร",
+        "email": "อีเมล",
+        "phone": "โทรศัพท์",
+        "fax": "แฟกซ์",
+        "industry": "อุตสาหกรรม",
+        "type": "ประเภท",
+        "updated": "อัปเดตล่าสุด",
+        "action": "ดำเนินการ"
+    },
+    "customer": {
+        "code": "รหัส",
+        "avatar": "รูป",
+        "name": "ชื่อ",
+        "email": "อีเมล",
+        "phone": "โทรศัพท์",
+        "mobile": "โทรศัพท์มือถือ",
+        "group": "กลุ่ม",
+        "updated": "อัปเดตล่าสุด",
+        "action": "ดำเนินการ"
+    },
+    "supplier": {
+        "code": "รหัส",
+        "avatar": "รูป",
+        "name": "ชื่อ",
+        "email": "อีเมล",
+        "phone": "โทรศัพท์",
+        "mobile": "โทรศัพท์มือถือ",
+        "group": "กลุ่ม",
+        "updated": "อัปเดตล่าสุด",
+        "action": "ดำเนินการ"
+    },
+    "contact": {
+        "avatar": "รูป",
+        "name": "ชื่อ",
+        "date_of_birth": "วันเกิด",
+        "gender": "เพศ",
+        "contact": "ติดต่อ",
+        "citizen_id": "รหัสประจำตัวประชาชน",
+        "action": "ดำเนินการ"
+    }
+}

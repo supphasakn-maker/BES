@@ -1,0 +1,325 @@
+[
+	{
+		"appname" : "dashboard",
+		"name" : "Dashboard",
+		"icon_type" : "feather",
+		"icon" : "trello",
+		"path" : "apps/dashboard/index.php"
+	},{
+		"appname" : "match",
+		"name" : "Cover Position",
+		"icon_type" : "feather",
+		"icon" : "trello",
+		"path" : "apps/match/index.php"
+	},{
+		"appname" : "datapanel",
+		"name" : "Data Panel",
+		"icon_type" : "feather",
+		"icon" : "trello",
+		"path" : "apps/datapanel/index.php"
+	},{
+		"appname" : "core",
+		"name" : "Master",
+		"icon" : "far fa-money-bill-alt",
+		"submenu" : [
+			{
+				"appname" : "sales",
+				"name" : "งานขาย",
+				"icon_type" : "feather",
+				"icon" : "monitor",
+				"path" : "apps/sales/index.php"
+			},{
+				"appname" : "purchase",
+				"name" : "งานซื้อ",
+				"icon_type" : "feather",
+				"icon" : "monitor",
+				"path" : "apps/purchase/index.php"
+			}
+		]
+	},{
+		"appname" : "sales",
+		"name" : "ข้อมูลการขาย",
+		"icon" : "far fa-money-bill-alt",
+		"submenu" : [
+			{
+				"appname" : "sales_screen",
+				"name" : "หน้าจอการขาย",
+				"icon_type" : "feather",
+				"icon" : "monitor",
+				"path" : "apps/sales_screen/index.php"
+			},{
+				"appname" : "schedule",
+				"name" : "Schedule",
+				"icon_type" : "feather",
+				"icon" : "calendar",
+				"path" : "apps/schedule/index.php"
+			},{
+				"appname" : "sales_overview",
+				"name" : "ภาพรวมการขาย",
+				"icon_type" : "feather",
+				"icon" : "trello",
+				"path" : "apps/sales_overview/index.php"
+			},{
+				"appname" : "prepare",
+				"name" : "เตรียมส่งของ",
+				"icon_type" : "feather",
+				"icon" : "shopping-cart",
+				"path" : "apps/prepare/index.php"
+			},{
+				"appname" : "pack_prepare",
+				"name" : "สรุปการแบ่งแพ็ค",
+				"icon_type" : "feather",
+				"icon" : "shopping-cart",
+				"path" : "apps/pack_prepare/index.php"
+			}
+		]
+	},{
+		"appname" : "purchase",
+		"name" : "ข้อมููลการซื้อ",
+		"icon_type" : "feather",
+		"icon" : "shopping-bag",
+		"submenu" : [
+			{
+				"appname" : "spot_silver",
+				"name" : "Spot Silver",
+				"icon_type" : "feather",
+				"icon" : "package",
+				"path" : "apps/spot_silver/index.php"
+			},{
+				"appname" : "usd",
+				"name" : "USD",
+				"icon_type" : "feather",
+				"icon" : "dollar-sign",
+				"path" : "apps/usd/index.php"
+			},{
+				"appname" : "reserve_silver",
+				"name" : "Reserve Silver",
+				"icon_type" : "feather",
+				"icon" : "database",
+				"path" : "apps/reserve_silver/index.php"
+			},{
+				"appname" : "stock_type",
+				"name" : "Stock Type",
+				"icon" : "far fa-cubes",
+				"path" : "apps/stock_type/index.php"
+			},{
+				"appname" : "usd_change",
+				"name" : "USD Change",
+				"icon_type" : "feather",
+				"icon" : "trending-up",
+				"path" : "apps/usd_change/index.php"
+			},{
+				"appname" : "sales_spot",
+				"name" : "Sales Spot",
+				"icon" : "far fa-cube",
+				"path" : "apps/sales_spot/index.php"
+			},{
+				"appname" : "trade_spot",
+				"name" : "Trade Spot",
+				"icon_type" : "feather",
+				"icon" : "layers",
+				"path" : "apps/trade_spot/index.php"
+			},{
+				"appname" : "adjust_cost",
+				"name" : "Adjust cost",
+				"icon" : "far fa-cogs",
+				"path" : "apps/adjust_cost/index.php"
+			}
+		]
+	},{
+		"appname" : "warehouse",
+		"name" : "คลังสินค้า",
+		"icon" : "far fa-warehouse",
+		"submenu" : [
+			{
+				"appname" : "import",
+				"name" : "Import",
+				"icon_type" : "feather",
+				"icon" : "file-plus",
+				"path" : "apps/import/index.php"
+			},{
+				"appname" : "production_prepare",
+				"name" : "เตรียมการผลิต",
+				"icon_type" : "feather",
+				"icon" : "file-plus",
+				"path" : "apps/production_prepare/index.php"
+			},{
+				"appname" : "production",
+				"name" : "การผลิตเม็ดเงิน",
+				"icon_type" : "feather",
+				"icon" : "codesandbox",
+				"path" : "apps/production/index.php"
+			},{
+				"appname" : "repack",
+				"name" : "รีแพ็ค",
+				"icon" : "far fa-gift",
+				"path" : "apps/repack/index.php"
+			},{
+				"appname" : "delivery",
+				"name" : "ส่งของ",
+				"icon_type" : "feather",
+				"icon" : "truck",
+				"path" : "apps/delivery/index.php"
+			},{
+				"appname" : "stock",
+				"name" : "Stock",
+				"icon_type" : "feather",
+				"icon" : "box",
+				"path" : "apps/stock/index.php"
+			}
+		]
+	},{
+		"appname" : "receive",
+		"name" : "รับชำระเงิน",
+		"icon_type" : "feather",
+		"icon" : "dollar-sign",
+		"submenu" : [
+			{
+				"appname" : "finance",
+				"name" : "การชำระเงิน",
+				"icon" : "far fa-money-bill",
+				"path" : "apps/finance/index.php"
+			},{
+				"appname" : "forward_contract",
+				"name" : "Contract",
+				"icon" : "far fa-history",
+				"path" : "apps/forward_contract/index.php"
+			},{
+				"appname" : "prepare_to_pay",
+				"name" : "เตรียมชำระเงิน",
+				"icon" : "far fa-clipboard-check",
+				"path" : "apps/prepare_to_pay/index.php"
+			},{
+				"appname" : "trust_receipt",
+				"name" : "Trust Receipt",
+				"icon" : "far fa-folder-open",
+				"path" : "apps/trust_receipt/index.php"
+			},{
+				"appname" : "sigmargin",
+				"name" : "SigMargin",
+				"icon" : "far fa-folder-open",
+				"path" : "apps/sigmargin/index.php"
+			},{
+				"appname" : "bank",
+				"name" : "Statement",
+				"icon" : "far fa-dollar-sign",
+				"path" : "apps/bank/index.php"
+			}
+		]
+	},{
+		"appname" : "main",
+		"name" : "ข้อมูลหลัก",
+		"icon_type" : "feather",
+		"icon" : "home",
+		"submenu" : [
+			{
+				"appname" : "customer",
+				"name" : "Customer",
+				"icon_type" : "feather",
+				"icon" : "users",
+				"path" : "apps/customer/index.php"
+			},{
+				"appname" : "supplier",
+				"name" : "Supplier",
+				"icon" : "far fa-users",
+				"path" : "apps/supplier/index.php"
+			},{
+				"appname" : "employee",
+				"name" : "Employee",
+				"icon" : "far fa-newspaper",
+				"path" : "apps/employee/index.php"
+			}
+		]
+	},{
+		"appname" : "report",
+		"name" : "รายงาน",
+		"icon" : "far fa-chart-bar",
+		"submenu" : [
+			{
+				"appname" : "report_profit",
+				"name" : "รายงาน Profit",
+				"icon" : "far fa-chart-line",
+				"path" : "apps/report_profit/index.php"
+			},{
+				"appname" : "report_sale",
+				"name" : "รายงานการขาย",
+				"icon" : "far fa-chart-pie",
+				"path" : "apps/report_sales/index.php"
+			},{
+				"appname" : "report_stock",
+				"name" : "Stock",
+				"icon_type" : "feather",
+				"icon" : "bar-chart-2",
+				"path" : "apps/report_stock/index.php"
+			},{
+				"appname" : "report_purchase",
+				"name" : "รายงานการซื้อ",
+				"icon_type" : "feather",
+				"icon" : "pie-chart",
+				"path" : "apps/report_purchase/index.php"
+			},{
+				"appname" : "report_financial",
+				"name" : "รายงานการเงิน",
+				"icon" : "far fa-chart-bar",
+				"path" : "apps/report_financial/index.php"
+			},{
+				"appname" : "report_graph",
+				"name" : "กราฟ",
+				"icon" : "far fa-chart-area",
+				"path" : "apps/report_graph/index.php"
+			},{
+				"appname" : "forward_contract_report",
+				"name" : "Contract Report",
+				"icon_type" : "feather",
+				"icon" : "pie-chart",
+				"path" : "apps/forward_contract_report/index.php"
+			}
+		]
+	},{
+		"appname" : "claim",
+		"icon_type" : "feather",
+		"icon" : "command",
+		"name" : "การเคลมสินค้า",
+		"submenu" : [
+			{
+				"appname" : "product_claim",
+				"name" : "แจ้งเพื่อเคลมสินค้า",
+				"icon_type" : "feather",
+				"icon" : "message-circle",
+				"path" : "apps/product_claim/index.php"
+			}
+		]
+	},{
+		"appname" : "admin",
+		"icon_type" : "feather",
+		"icon" : "command",
+		"name" : "Administration",
+		"submenu" : [
+			{
+				"appname" : "setting",
+				"name" : "Setting",
+				"icon_type" : "feather",
+				"icon" : "settings",
+				"path" : "apps/setting/index.php"
+			},{
+				"appname" : "accctrl",
+				"name" : "Access Control",
+				"icon_type" : "feather",
+				"icon" : "users",
+				"path" : "apps/accctrl/index.php"
+			},{
+				"appname" : "database",
+				"name" : "Database",
+				"icon_type" : "feather",
+				"icon" : "database",
+				"path" : "apps/database/index.php"
+			},{
+				"appname" : "zystem",
+				"name" : "Zystem",
+				"icon_type" : "feather",
+				"icon" : "settings",
+				"path" : "apps/zystem/index.php"
+			}
+		]
+	}
+]

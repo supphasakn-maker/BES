@@ -1,0 +1,30 @@
+var claim = {
+	product : {
+		dialog_lookup : fn.noaccess,
+		dialog_view : fn.noaccess,
+		dialog_add : fn.noaccess,
+		dialog_edit : fn.noaccess,
+		dialog_remove : fn.noaccess,
+		dialog_approve : fn.noaccess,
+		dialog_reject : fn.noaccess,
+		dialog_submit : fn.noaccess,
+		dialog_solve : fn.noaccess,
+		dialog_confirm : fn.noaccess,
+		dialog_file : fn.noaccess,
+		view : fn.noaccess,
+		add : fn.noaccess,
+		select : fn.noaccess,
+		edit : fn.noaccess,
+		remove : fn.noaccess,
+		approve : fn.noaccess,
+		reject : fn.noaccess,
+		submit : fn.noaccess,
+		solve : fn.noaccess,
+		confirm : fn.noaccess,
+		append : fn.noaccess,
+		upload : fn.noaccess,
+		clear : fn.noaccess,
+		save : fn.noaccess
+	},
+};
+$.extend(fn.app,{claim:claim});

@@ -1,0 +1,92 @@
+      <div class="row">
+        <div class="col">
+
+          <div class="card">
+            <div class="card-body">
+              <section id="section1">
+                <h5>Basic</h5>
+                <p class="text-muted font-size-sm">
+                  Enter a comma-separated list of tags.
+                </p>
+                <input type="text" name="tags" class="form-control tagin" value="dark mode,favicon,media queries,svg,svg icons">
+              </section>
+            </div>
+          </div>
+
+          <div class="card mt-5">
+            <div class="card-body">
+              <section id="section2">
+                <h5>Placeholder</h5>
+                <p class="text-muted font-size-sm">
+                  Set placeholder using <code>data-placeholder</code> attribute.
+                </p>
+                <input type="text" name="tags" class="form-control tagin" value="red,green,blue" data-placeholder="Add a color... (then press comma)">
+              </section>
+            </div>
+          </div>
+
+          <div class="card mt-5">
+            <div class="card-body">
+              <section id="section3">
+                <h5>Custom Separator</h5>
+                <p class="text-muted font-size-sm">
+                  Set separator using <code>data-separator</code> attribute.<br>
+                  Example tags using 'space' separator.
+                </p>
+                <input type="text" name="tags" class="form-control tagin" data-separator=" " value="autocomplete forms inputmode inputs ux">
+              </section>
+            </div>
+          </div>
+
+          <div class="card mt-5">
+            <div class="card-body">
+              <section id="section4">
+                <h5>Duplicates</h5>
+                <p class="text-muted font-size-sm">
+                  Add <code>data-duplicate="true"</code> to remove duplicates validation.
+                </p>
+                <input type="text" name="tags" class="form-control tagin" data-duplicate="true" value="html,html,css,css,js,js">
+              </section>
+            </div>
+          </div>
+
+          <div class="card mt-5">
+            <div class="card-body">
+              <section id="section5">
+                <h5>Transform Tags</h5>
+                <p class="text-muted font-size-sm">
+                  Sometimes we need to transform tags.<br>
+                  Example transform using <code>toUpperCase</code>.
+                </p>
+                <input type="text" name="tags" class="form-control tagin" data-transform="input => input.toUpperCase()" value="HTML,CSS">
+              </section>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-3 d-none d-xl-block">
+          <div class="nav-section">
+            <label class="text-muted">On This Page</label>
+            <nav id="navSection" class="nav flex-column">
+              <a href="#section1" class="nav-link nav-link-sm">Basic</a>
+              <a href="#section2" class="nav-link nav-link-sm">Placeholder</a>
+              <a href="#section3" class="nav-link nav-link-sm">Custom Separator</a>
+              <a href="#section4" class="nav-link nav-link-sm">Duplicates</a>
+              <a href="#section5" class="nav-link nav-link-sm">Transform Tags</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        var plugins = [
+          'plugins/tagin/tagin.min.js',
+        ]
+        App.loadPlugins(plugins, null).then(() => {
+          for (const el of document.querySelectorAll('.tagin')) {
+            tagin(el)
+          }
+
+        }).then(() => App.stopLoading())
+      </script>

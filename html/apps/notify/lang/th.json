@@ -1,0 +1,8 @@
+{
+	"user" : {
+		"user" : "User",
+		"username" : "ชื่อผู้ใช้งาน",
+		"user" : "user"
+	},
+	"group" : "group"
+}

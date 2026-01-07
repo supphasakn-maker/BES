@@ -1,0 +1,2 @@
+<!-- Custom code to be included before </head> tag -->
+<link rel="stylesheet" href="custom.css">

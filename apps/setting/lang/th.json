@@ -1,0 +1,15 @@
+{
+	"general" : {
+		"home" : "น้าแรก",
+		"setting" : "ตั่งค่า",
+		"overview" : "ภาพรวม",
+		"my_profile" : "รายละเอียดของฉัน",
+		"my_company" : "บริษัทของฉัน",
+		"system" : "ระบบ"
+	},
+	"overview" : {
+		"code_name" : "รหัสโปรแกรม",
+		"version" : "รุ่น",
+		"license" : "ประเภทสัญญา"
+	}
+}

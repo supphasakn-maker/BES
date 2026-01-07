@@ -1,0 +1,116 @@
+$('#tblQuickOrder').DataTable({
+    "paging": false,
+    responsive: true,
+    "bStateSave": true,
+    "autoWidth": true,
+    "processing": true,
+    "serverSide": true,
+    "ajax": "apps/sales_silver/store/store-quick_order.php",
+    "aoColumns": [
+        { "bSortable": true, "data": "created", class: "text-center" },
+        { "bSortable": true, "data": "code", class: "text-center" },
+        { "bSortable": true, "data": "customer_name", class: "text-center" },
+        { "bSortable": true, "data": "amount", class: "text-right" },
+        { "bSortable": true, "data": "price", class: "text-right" },
+        { "bSortable": true, "data": "total", class: "text-right" },
+        { "bSortable": true, "data": "status", class: "text-center" },
+        { "bSortable": true, "data": "rate_spot", class: "text-center" },
+        { "bSortable": true, "data": "rate_exchange", class: "text-center" },
+        { "bSortable": true, "data": "sales", class: "text-center" },
+        // {"bSortable":true	,"data":"product"	,class:"text-center"	},
+    ], "order": [[0, "desc"]],
+    "createdRow": function (row, data, index) {
+        $('td', row).eq(0).html(moment(data.created).format("HH:mm:ss"));
+        var s = '';
+
+        if (data.status == "1") {
+            s += fn.ui.button("btn btn-xs btn-outline-dark mr-1", "far fa-pen", "fn.app.sales.quick_order.dialog_edit(" + data[0] + ")");
+            s += fn.ui.button("btn btn-xs btn-danger mr-1", "far fa-times", "fn.app.sales.quick_order.remove(" + data[0] + ")");
+            s += fn.ui.button("btn btn-xs btn-primary mr-1", "far fa-shopping-cart", "fn.app.sales.quick_order.dialog_transform(" + data[0] + ")");
+            $('td', row).eq(6).html(s);
+        } else if (data.status == "0") {
+            $('td', row).eq(6).html('<span class="badge badge-danger">ลบแล้ว</span>');
+        } else {
+            if (data.delivery_date == null) {
+                s += '<span class="badge badge-danger">lock</span> ';
+
+            }
+            s += '<span class="badge badge-dark">created</span> ';
+            s += '<a class="btn btn-xs btn-outline-dark mr-1" href="#apps/schedule/index.php?view=printablesalebf&order_id=' + data.order_id + '" target="_blank"><i class="far fa-print"></i></a> ';
+
+            $('td', row).eq(6).html(s);
+        }
+    },
+    "footerCallback": function (row, data, start, end, display) {
+        var api = this.api();
+
+        var tAmount = 0;
+        var tValue = 0;
+
+
+        var cleanAndParseFloat = function (value) {
+            if (value === null || typeof value === 'undefined') {
+                return 0;
+            }
+            return parseFloat(String(value).replace(/[^\d.-]/g, '')) || 0;
+        };
+
+        for (var i = 0; i < data.length; i++) {
+            var amount = cleanAndParseFloat(data[i].amount);
+            var total = cleanAndParseFloat(data[i].total);
+
+            tAmount += amount;
+            tValue += total;
+        }
+
+        $("#tblQuickOrder [xname=tAmount]").html(fn.ui.numberic.format(tAmount, 4));
+        $("#tblQuickOrder [xname=tValue]").html(fn.ui.numberic.format(tValue, 4));
+
+    }
+});
+
+$('#tblBuyOrder').DataTable({
+    "paging": false,
+    responsive: true,
+    "bStateSave": true,
+    "autoWidth": true,
+    "processing": true,
+    "serverSide": true,
+    "ajax": "apps/sales_silver/store/store-quick_buyorder.php",
+    "aoColumns": [
+        { "bSortable": false, "data": "id", "sClass": "hidden-xs text-center", "sWidth": "20px" },
+        { "bSortable": true, "data": "code", class: "text-center" },
+        { "bSortable": true, "data": "customer_name", class: "text-center" },
+        { "bSortable": true, "data": "amount", class: "text-right" },
+        { "bSortable": true, "data": "price", class: "text-right" },
+        { "bSortable": true, "data": "status", class: "text-center" },
+        { "bSortable": true, "data": "rate_spot", class: "text-center" },
+        { "bSortable": true, "data": "rate_exchange", class: "text-center" },
+        { "bSortable": true, "data": "sales", class: "text-center" },
+        { "bSortable": true, "data": "product", class: "text-center" },
+    ], "order": [[0, "desc"]],
+    "createdRow": function (row, data, index) {
+        $('td', row).eq(0).html(moment(data.created).format("HH:mm:ss"));
+        var s = '';
+
+
+        s += fn.ui.button("btn btn-xs btn-outline-dark mr-1", "far fa-pen", "fn.app.sales_silver.quick_buyorder.dialog_edit(" + data[0] + ")");
+        s += fn.ui.button("btn btn-xs btn-danger mr-1", "far fa-times", "fn.app.sales_silver.quick_buyorder.remove(" + data[0] + ")");
+        $('td', row).eq(5).html(s);
+        s += '<a class="btn btn-xs btn-outline-dark mr-1" href="#apps/schedule/index.php?view=printablebf&order_id=' + data.id + '" target="_blank"><i class="far fa-print"></i></a> ';
+
+        $('td', row).eq(5).html(s);
+
+    },
+    "footerCallback": function (row, data, start, end, display) {
+        var api = this.api(), data;
+
+        var tAmount = 0, tValue = 0;
+        for (i in data) {
+            tAmount += parseFloat(data[i].amount);
+        }
+
+        $("#tblBuyOrder [xname=tAmount]").html(fn.ui.numberic.format(tAmount, 4));
+
+    }
+});

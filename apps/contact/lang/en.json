@@ -1,0 +1,50 @@
+{
+    "main": {
+        "organization": "Organization",
+        "customer": "Customer",
+        "supplier": "Supplier",
+        "employee": "Employee",
+        "contact": "Contact"
+    },
+    "organization": {
+        "organization": "Organization",
+        "email": "Email",
+        "phone": "Phone",
+        "fax": "Fax",
+        "industry": "Industry",
+        "type": "Type",
+        "updated": "Updated",
+        "action": "Action"
+    },
+    "customer": {
+        "code": "Code",
+        "avatar": "Avatar",
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone",
+        "mobile": "Mobile",
+        "group": "Group",
+        "updated": "Updated",
+        "action": "Action"
+    },
+    "supplier": {
+        "code": "Code",
+        "avatar": "Avatar",
+        "name": "Name",
+        "email": "Email",
+        "phone": "Phone",
+        "mobile": "Mobile",
+        "group": "Group",
+        "updated": "Updated",
+        "action": "Action"
+    },
+    "contact": {
+        "avatar": "Avatar",
+        "name": "Name",
+        "date_of_birth": "Date of Birth",
+        "gender": "Gender",
+        "contact": "Contact",
+        "citizen_id": "Citizen ID",
+        "action": "Action"
+    }
+}

@@ -1,0 +1,183 @@
+      <h5>Bar Chart</h5>
+      <p class="text-secondary font-size-sm">
+        A bar chart provides a way of showing data values represented as vertical bars. It is sometimes used to show trend data, and the comparison of multiple data sets side by side.
+      </p>
+
+      <div class="row row-cols-1 row-cols-md-2 gutters-sm">
+
+        <!-- VERTICAL -->
+        <div class="col mb-3">
+          <div class="card">
+            <div class="card-header">
+              Vertical
+              <button type="button" data-action="fullscreen" class="btn btn-sm btn-text-secondary btn-icon rounded-circle ml-auto">
+                <i class="material-icons">fullscreen</i>
+              </button>
+            </div>
+            <div class="card-body" style="height: 300px">
+              <canvas id="bar-chart-vertical"></canvas>
+            </div>
+          </div>
+        </div>
+        <!-- /VERTICAL -->
+
+        <!-- HORIZONTAL -->
+        <div class="col mb-3">
+          <div class="card">
+            <div class="card-header">
+              Horizontal
+              <button type="button" data-action="fullscreen" class="btn btn-sm btn-text-secondary btn-icon rounded-circle ml-auto">
+                <i class="material-icons">fullscreen</i>
+              </button>
+            </div>
+            <div class="card-body" style="height: 300px">
+              <canvas id="bar-chart-horizontal"></canvas>
+            </div>
+          </div>
+        </div>
+        <!-- /HORIZONTAL -->
+
+        <!-- MULTI AXIS -->
+        <div class="col mb-3">
+          <div class="card">
+            <div class="card-header">
+              Multi Axis
+              <button type="button" data-action="fullscreen" class="btn btn-sm btn-text-secondary btn-icon rounded-circle ml-auto">
+                <i class="material-icons">fullscreen</i>
+              </button>
+            </div>
+            <div class="card-body" style="height: 300px">
+              <canvas id="bar-chart-multi"></canvas>
+            </div>
+          </div>
+        </div>
+        <!-- /MULTI AXIS -->
+
+        <!-- STACKED -->
+        <div class="col mb-3">
+          <div class="card">
+            <div class="card-header">
+              Stacked
+              <button type="button" data-action="fullscreen" class="btn btn-sm btn-text-secondary btn-icon rounded-circle ml-auto">
+                <i class="material-icons">fullscreen</i>
+              </button>
+            </div>
+            <div class="card-body" style="height: 300px">
+              <canvas id="bar-chart-stacked"></canvas>
+            </div>
+          </div>
+        </div>
+        <!-- /STACKED -->
+
+      </div>
+
+      <script>
+        var plugins = [
+          'plugins/chart.js/Chart.min.js',
+        ]
+        App.loadPlugins(plugins, null).then(() => {
+          // Data example
+          monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July']
+          data1 = [33, 79, 85, 54, 64, 97, 79]
+          data2 = [84, 100, 64, 18, 16, 94, 73]
+
+          // Chart options
+          const options = {
+            maintainAspectRatio: false, // disable the maintain aspect ratio in options then it uses the available height
+            tooltips: {
+              mode: 'index',
+              intersect: false, // Interactions configuration: https://www.chartjs.org/docs/latest/general/interactions/
+            },
+            elements: {
+              line: {
+                borderWidth: 1
+              },
+              rectangle: {
+                borderWidth: 1
+              }
+            }
+          }
+
+          /***************** VERTICAL *****************/
+          new Chart('bar-chart-vertical', {
+            type: 'bar',
+            data: {
+              labels: monthNames,
+              datasets: [{
+                label: 'My dataset',
+                backgroundColor: Chart.helpers.color(blue).alpha(0.5).rgbString(),
+                borderColor: blue,
+                data: data1
+              }]
+            },
+            options: options
+          })
+
+          /***************** HORIZONTAL *****************/
+          new Chart('bar-chart-horizontal', {
+            type: 'horizontalBar',
+            data: {
+              labels: monthNames,
+              datasets: [{
+                label: 'My dataset',
+                backgroundColor: Chart.helpers.color(green).alpha(0.5).rgbString(),
+                borderColor: green,
+                data: data1
+              }]
+            },
+            options: options
+          })
+
+          /***************** MULTI AXIS *****************/
+          new Chart('bar-chart-multi', {
+            type: 'bar',
+            data: {
+              labels: monthNames,
+              datasets: [{
+                  label: '2018',
+                  backgroundColor: Chart.helpers.color(cyan).alpha(0.5).rgbString(),
+                  borderColor: cyan,
+                  data: data1
+                },
+                {
+                  label: '2019',
+                  backgroundColor: Chart.helpers.color(yellow).alpha(0.5).rgbString(),
+                  borderColor: yellow,
+                  data: data2
+                }
+              ]
+            },
+            options: options
+          })
+
+          /***************** STACKED *****************/
+          options.scales = {
+            xAxes: [{
+              stacked: true,
+            }],
+            yAxes: [{
+              stacked: true
+            }]
+          }
+          let chartStacked = new Chart('bar-chart-stacked', {
+            type: 'bar',
+            data: {
+              labels: monthNames,
+              datasets: [{
+                  label: '2018',
+                  backgroundColor: Chart.helpers.color(purple).alpha(0.5).rgbString(),
+                  borderColor: purple,
+                  data: data1
+                },
+                {
+                  label: '2019',
+                  backgroundColor: Chart.helpers.color(pink).alpha(0.5).rgbString(),
+                  borderColor: pink,
+                  data: data2
+                }
+              ]
+            },
+            options: options
+          })
+        }).then(() => App.stopLoading())
+      </script>

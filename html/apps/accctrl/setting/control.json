@@ -1,0 +1,6 @@
+{
+	"name" : "auth",
+	"caption" : "Authentication Setting",
+	"view" : "../../apps/accctrl/setting/view/page.auth.php",
+	"control" : "../../apps/accctrl/setting/control/controller.auth.js"
+}

@@ -1,0 +1,153 @@
+<?php
+include_once "../../sigmargin_stx/include/engine.php";
+
+$engine = new engine($dbc);
+
+$oz = 32.1507;
+$date = strtotime($_POST['date']);
+
+?>
+<table id="tblJournal" class="table table-bordered table-sm">
+	<thead>
+		<tr>
+			<th class="text-center">Date</th>
+			<th class="text-center">Q(Oz)</th>
+			<th class="text-center">Q(Kg)</th>
+			<th class="text-center">Sell</th>
+			<th class="text-center">Buy</th>
+			<th class="text-center">กำไร(ขาดทุน)</th>
+			<th class="text-center"></th>
+		</tr>
+	</thead>
+	<tbody>
+		<?php
+
+		$init_a = $os->load_variable("fInit_USD");
+		$init_b = $os->load_variable("fInit_XAG");
+		$aBalance = array(floatval($init_a), floatval($init_b), 0.0, 0.0);
+
+		$xdata = $engine->get_balance($date);
+		$aBalance[0] += $xdata[0];
+		$aBalance[1] += $xdata[1];
+
+		$line = $dbc->GetRecord("bs_smg_stx_rate", "rate", "date < '" . date("Y-m-1", $date) . "' ORDER BY date DESC");
+		$interest_rate = $line['rate'];
+
+
+		for ($d = 1; $d <= date("t", $date); $d++) {
+			$date_sql = date("Y-m-", $date) . sprintf("%02d", $d);
+			$date_display = sprintf("%02d", $d) . date("/m/Y", $date);
+
+			$usd_cr = 0;
+			$usd_dr = 0;
+			$xag_cr = 0;
+			$xag_dr = 0;
+			$rollover = 0;
+			$spot_sell = 0;
+			$spot_buy = 0;
+			$cash = 0;
+
+			$usd_dr_msg = array();
+			$usd_cr_msg = array();
+			$xag_dr_msg = array();
+			$xag_cr_msg = array();
+			$xag_cr_msg = array();
+			$xag_cr_msg = array();
+
+			//USD-
+			$tdata = $engine->get_usd_debit($date_sql);
+			foreach ($tdata[1] as $msg) {
+				array_push($usd_dr_msg, $msg);
+			}
+			$usd_dr += -$tdata[0];
+
+			//USD+
+			$tdata = $engine->get_usd_credit($date_sql);
+			foreach ($tdata[1] as $msg) {
+				array_push($usd_cr_msg, $msg);
+			}
+			$usd_cr += $tdata[0];
+
+			$aBalance[0] = $aBalance[0] + $usd_dr + $usd_cr;
+
+			$tdata = $engine->get_xag_debit($date_sql);
+			foreach ($tdata[1] as $msg) {
+				array_push($xag_dr_msg, $msg);
+			}
+			$xag_dr += -$tdata[0];
+
+			//USD+
+			$tdata = $engine->get_xag_credit($date_sql);
+			foreach ($tdata[1] as $msg) {
+				array_push($xag_cr_msg, $msg);
+			}
+			$xag_cr += $tdata[0];
+
+			$aBalance[1] += $xag_cr + $xag_dr;
+
+			if ($dbc->HasRecord("bs_smg_stx_daily", "date ='" . $date_sql . "'")) {
+				$line = $dbc->GetRecord("bs_smg_stx_daily", "*", "date ='" . $date_sql . "'");
+				$spot_buy = $line['spot_buy'];
+				$spot_sell = $line['spot_sell'];
+				$cash = $line['cash'];
+				$rollover = $line['rollover'];
+			}
+
+			/*
+			$line = $dbc->GetRecord("bs_smg_stx_rollover","SUM(amount),rate_spot","date ='".$date_sql."' AND type='Sell'");
+			$spot_buy = $line[1];
+			$rollover += $line[0];
+
+
+			$line = $dbc->GetRecord("bs_smg_stx_rollover","SUM(amount),rate_spot","trade ='".$date_sql."' AND type='Buy'");
+			$spot_sell += -$line[1];
+			*/
+			/*
+			$line = $dbc->GetRecord("bs_smg_stx_rollover","SUM(amount),rate_spot","date ='".$date_sql."' AND type='Buy'");
+			$rollover +=  $line[0];
+*/
+
+
+			$line = $dbc->GetRecord("bs_smg_stx_cash", "SUM(amount)", "date ='" . $date_sql . "'");
+			$cash += $line[0];
+
+
+			$df = $aBalance[0] - $cash;
+
+			if ($dbc->HasRecord("bs_smg_stx_rate", "date = '" . $date_sql . "'")) {
+				$line = $dbc->GetRecord("bs_smg_stx_rate", "rate", "date = '" . $date_sql . "'");
+				$interest_rate = $line['rate'];
+			}
+			$interest = $aBalance[0] * ($interest_rate / 100) / 360;
+
+
+
+			$margin = $spot_buy + $spot_sell;
+			$dif = $margin * $rollover * 32.1507;
+			$aBalance[2] += $margin;
+			$aBalance[3] += $dif;
+
+
+			$tooltip = ' data-toggle="tooltip" data-html="true"';
+			echo '<tr>';
+			echo '<td class="text-center">' . $date_display . '</td>';
+			echo '<td class="text-right">' . number_format($rollover * 32.1507, 5) . '</td>';
+			echo '<td class="text-right">' . number_format($rollover, 5) . '</td>';
+			echo $engine->show_tr($spot_sell, 5);
+			echo $engine->show_tr($spot_buy, 5);
+			echo $engine->show_tr($margin, 5);
+			echo $engine->show_tr($dif, 2);
+
+			echo '</tr>';
+		}
+		?>
+	</tbody>
+	<thead>
+		<tr>
+			<td class="text-right" colspan="5">Total</td>
+			<?php echo $engine->show_tr($aBalance[2], 5); ?>
+			<?php echo $engine->show_tr($aBalance[3], 2); ?>
+		</tr>
+
+	</thead>
+</table>

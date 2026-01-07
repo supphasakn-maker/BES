@@ -1,0 +1,582 @@
+[
+	{
+		"appname" : "dashboard",
+		"name" : "Dashboard",
+		"icon" : "fas fa-chart-pie",
+		"path" : "apps/dashboard/index.php"
+	},{
+		"appname" : "match",
+		"name" : "Cover Position",
+		"icon_type" : "feather",
+		"icon" : "trello",
+		"path" : "apps/match/index.php"
+	},{
+		"appname" : "datapanel",
+		"name" : "Data Panel",
+		"icon_type" : "feather",
+		"icon" : "trello",
+		"path" : "apps/datapanel/index.php"
+	},{
+		"appname" : "cou_pons",
+		"name" : "คูปองส่วนลด",
+		"icon_type" : "feather",
+		"icon" : "trello",
+		"path" : "apps/cou_pons/index.php"
+	},{
+		"appname" : "tracking_bwd",
+		"name" : "Tracking",
+		"icon_type" : "feather",
+		"icon" : "calendar",
+		"path" : "apps/tracking_bwd/index.php"
+	},{
+		"appname" : "holiday_announce",
+		"name" : "วันหยุดประจำปี",
+		"icon_type" : "feather",
+		"icon" : "globe",
+		"path" : "apps/holiday_announce/index.php"
+	},{
+		"appname" : "trader",
+		"name" : "Trader",
+		"icon_type" : "feather",
+		"icon" : "trending-up",
+		"submenu" : [
+			{
+				"appname" : "profit_loss",
+				"name" : "Profit Loss",
+				"icon" : "fas fa-exchange-alt",
+				"path" : "apps/profit_loss/index.php"
+			},{
+				"appname" : "profit_loss_bwd",
+				"name" : "Profit Loss Bowins Design",
+				"icon" : "fas fa-exchange-alt",
+				"path" : "apps/profit_loss_bwd/index.php"
+			}
+		]
+	},{
+		"appname" : "core",
+		"name" : "Master",
+		"icon" : "far fa-money-bill-alt",
+		"submenu" : [
+			{
+				"appname" : "sales",
+				"name" : "งานขาย",
+				"icon_type" : "feather",
+				"icon" : "monitor",
+				"path" : "apps/sales/index.php"
+			},{
+				"appname" : "purchase",
+				"name" : "งานซื้อ",
+				"icon_type" : "feather",
+				"icon" : "monitor",
+				"path" : "apps/purchase/index.php"
+			}
+		]
+	},{
+		"appname" : "sales",
+		"name" : "ข้อมูลการขาย",
+		"icon" : "far fa-money-bill-alt",
+		"submenu" : [
+			{
+				"appname" : "sales_screen",
+				"name" : "Stock / ขาย",
+				"icon_type" : "feather",
+				"icon" : "monitor",
+				"path" : "apps/sales_screen/index.php"
+			},{
+				"appname" : "announce",
+				"name" : "ประกาศราคาแท่งเงิน 1 Kilo",
+				"icon" : "fas fa-bullhorn",
+				"path" : "apps/announce/index.php"
+			},{
+				"appname" : "sales_silver",
+				"name" : "ซื้อ-ขาย แท่งเงิน",
+				"icon" : "fas fa-exchange-alt",
+				"path" : "apps/sales_silver/index.php"
+			},{
+				"appname" : "schedule",
+				"name" : "Schedule",
+				"icon" : "fas fa-calendar-plus",
+				"path" : "apps/schedule/index.php"
+			},{
+				"appname" : "sales_overview",
+				"name" : "ภาพรวมการขาย",
+				"icon_type" : "feather",
+				"icon" : "trello",
+				"path" : "apps/sales_overview/index.php"
+			},{
+				"appname" : "sales_stock",
+				"name" : "ใบเช็คสต๊อค",
+				"icon_type" : "feather",
+				"icon" : "database",
+				"path" : "apps/sales_stock/index.php"
+			},{
+				"appname" : "prepare",
+				"name" : "เตรียมส่งของ",
+				"icon" : "fas fa-truck",
+				"path" : "apps/prepare/index.php"
+			},{
+				"appname" : "pack_prepare",
+				"name" : "สรุปการแบ่งแพ็ค",
+				"icon_type" : "feather",
+				"icon" : "shopping-cart",
+				"path" : "apps/pack_prepare/index.php"
+			},{
+				"appname" : "incomingplan",
+				"name" : "แผนการนำสินค้าเข้า",
+				"icon" : "fas fa-space-shuttle",
+				"path" : "apps/incomingplan/index.php"
+			},{
+				"appname" : "coa_coc",
+				"name" : "COA / COC",
+				"icon" : "fas fa-certificate",
+				"path" : "apps/coa_coc/index.php"
+			}
+		]
+	},{
+		"appname" : "bowins_design",
+		"name" : "Bowins Design",
+		"icon" : "far fa-gem",
+		"submenu" : [
+			{
+				"appname" : "market_price_bwd",
+				"name" : "Market Price ",
+				"icon" : "fas fa-bullhorn",
+				"path" : "apps/market_price_bwd/index.php"
+			},{
+				"appname" : "stock_plan_bwd",
+				"name" : "Stock ",
+				"icon_type" : "feather",
+				"icon" : "monitor",
+				"path" : "apps/stock_plan_bwd/index.php"
+			},{
+				"appname" : "sales_screen_bwd",
+				"name" : "ขาย",
+				"icon" : "fas fa-cart-plus",
+				"path" : "apps/sales_screen_bwd/index.php"
+			},{
+				"appname" : "schedule_bwd",
+				"name" : "Schedule",
+				"icon" : "fas fa-calendar-plus",
+				"path" : "apps/schedule_bwd/index.php"
+			},{
+				"appname" : "prepare_pack_bwd",
+				"name" : "จัดเตรียมเพื่อแพ็ค",
+				"icon" : "fa fa-boxes",
+				"path" : "apps/prepare_pack_bwd/index.php"
+			},{
+				"appname" : "prepare_pack_bwd_luckgems",
+				"name" : "จัดเตรียมเพื่อแพ็คไป Luck Gems",
+				"icon" : "fa fa-boxes",
+				"path" : "apps/prepare_pack_bwd_luckgems/index.php"
+			},{
+				"appname" : "sales_overview_bwd",
+				"name" : "ภาพรวมการขาย",
+				"icon_type" : "feather",
+				"icon" : "trello",
+				"path" : "apps/sales_overview_bwd/index.php"
+			},{
+				"appname" : "prepare_bwd",
+				"name" : "เตรียมส่งของ",
+				"icon" : "fas fa-truck",
+				"path" : "apps/prepare_bwd/index.php"
+			},{
+				"appname" : "plan_bowinsdesign",
+				"name" : "แผนการนำเข้า Bowins Design",
+				"icon" : "fas fa-plus",
+				"path" : "apps/plan_bowinsdesign/index.php"
+			},{
+				"appname" : "stock_bwd",
+				"name" : "เพิ่มแท่งเงิน",
+				"icon" : "fas fa-plus",
+				"path" : "apps/stock_bwd/index.php"
+			},{
+				"appname" : "stock_type_bwd",
+				"name" : "Stock BWD",
+				"icon" : "fas fa-warehouse",
+				"path" : "apps/stock_type_bwd/index.php"
+			},{
+				"appname" : "product_type_bwd",
+				"name" : "Product / Type",
+				"icon" : "fa fa-boxes",
+				"path" : "apps/product_type_bwd/index.php"
+			},{
+				"appname" : "sales_back_bwd",
+				"name" : "ขายคืน",
+				"icon" : "fas fa-exchange-alt",
+				"path" : "apps/sales_back_bwd/index.php"
+			}
+		]
+	},{
+		"appname" : "purchase",
+		"name" : "ข้อมูลการซื้อ",
+		"icon_type" : "feather",
+		"icon" : "dollar-sign",
+		"submenu" : [
+			{
+				"appname" : "spot_silver",
+				"name" : "Spot Silver",
+				"icon_type" : "feather",
+				"icon" : "package",
+				"path" : "apps/spot_silver/index.php"
+			},{
+				"appname" : "usd",
+				"name" : "USD",
+				"icon_type" : "feather",
+				"icon" : "dollar-sign",
+				"path" : "apps/usd/index.php"
+			},{
+				"appname" : "reserve_silver",
+				"name" : "Reserve Silver",
+				"icon_type" : "feather",
+				"icon" : "database",
+				"path" : "apps/reserve_silver/index.php"
+			},{
+				"appname" : "stock_type",
+				"name" : "Stock Type",
+				"icon" : "far fa-cubes",
+				"path" : "apps/stock_type/index.php"
+			},{
+				"appname" : "usd_change",
+				"name" : "USD Change",
+				"icon_type" : "feather",
+				"icon" : "trending-up",
+				"path" : "apps/usd_change/index.php"
+			},{
+				"appname" : "sales_spot",
+				"name" : "Sales Spot",
+				"icon" : "far fa-cube",
+				"path" : "apps/sales_spot/index.php"
+			},{
+				"appname" : "trade_spot",
+				"name" : "Trade Spot",
+				"icon_type" : "feather",
+				"icon" : "layers",
+				"path" : "apps/trade_spot/index.php"
+			},{
+				"appname" : "adjust_cost",
+				"name" : "Adjust cost",
+				"icon" : "far fa-cogs",
+				"path" : "apps/adjust_cost/index.php"
+			},{
+				"appname" : "defer_cost",
+				"name" : "Defer cost",
+				"icon" : "far fa-cogs",
+				"path" : "apps/defer_cost/index.php"
+			},{
+				"appname" : "buy_fixed",
+				"name" : "Buy / Sell Fix",
+				"icon_type" : "feather",
+				"icon" : "dollar-sign",
+				"path" : "apps/buy_fixed/index.php"
+			}
+		]
+	},{
+		"appname" : "warehouse",
+		"name" : "คลังสินค้า",
+		"icon" : "fas fa-industry",
+		"submenu" : [
+			{
+				"appname" : "import",
+				"name" : "Import",
+				"icon_type" : "feather",
+				"icon" : "file-plus",
+				"path" : "apps/import/index.php"
+			},{
+				"appname" : "production_round",
+				"name" : "แบ่งผลิต",
+				"icon" : "fas fa-cut",
+				"path" : "apps/production_round/index.php"
+			},{
+				"appname" : "production_prepare",
+				"name" : "เตรียมการผลิตเม็ดเงิน",
+				"icon_type" : "feather",
+				"icon" : "file-plus",
+				"path" : "apps/production_prepare/index.php"
+			},{
+				"appname" : "production_silverplate",
+				"name" : "เตรียมการผลิตแท่ง SILVER PLATE",
+				"icon_type" : "feather",
+				"icon" : "file-plus",
+				"path" : "apps/production_silverplate/index.php"
+			},{
+				"appname" : "production_summarize",
+				"name" : "สรุปรอบ",
+				"icon_type" : "feather",
+				"icon" : "file-plus",
+				"path" : "apps/production_summarize/index.php"
+			},{
+				"appname" : "production",
+				"name" : "การผลิตเม็ดเงิน",
+				"icon_type" : "feather",
+				"icon" : "codesandbox",
+				"path" : "apps/production/index.php"
+			},{
+				"appname" : "production_blackdust",
+				"name" : "การจัดการ Refine",
+				"icon_type" : "feather",
+				"icon" : "codesandbox",
+				"path" : "apps/production_blackdust/index.php"
+			},{
+				"appname" : "production_scrap",
+				"name" : "การจัดการเศษ",
+				"icon" : "fas fa-warehouse",
+				"path" : "apps/production_scrap/index.php"
+			},{
+				"appname" : "production_crucible",
+				"name" : "การจัดการเบ้าหลอม",
+				"icon" : "fas fa-warehouse",
+				"path" : "apps/production_crucible/index.php"
+			},{
+				"appname" : "production_over",
+				"name" : "เม็ดเกิน",
+				"icon" : "fas fa-exclamation-triangle",
+				"path" : "apps/production_over/index.php"
+			},{
+				"appname" : "production_switch",
+				"name" : "ยืม / คืน",
+				"icon" : "fas fa-exchange-alt",
+				"path" : "apps/production_switch/index.php"
+			},{
+				"appname" : "repack",
+				"name" : "รีแพ็ค",
+				"icon" : "far fa-gift",
+				"path" : "apps/repack/index.php"
+			},{
+				"appname" : "delivery",
+				"name" : "ส่งของ",
+				"icon_type" : "feather",
+				"icon" : "truck",
+				"path" : "apps/delivery/index.php"
+			},{
+				"appname" : "manage_cars",
+				"name" : "Manage รถยนต์/มอไซต์",
+				"icon_type" : "feather",
+				"icon" : "truck",
+				"path" : "apps/manage_cars/index.php"
+			},{
+				"appname" : "production_pmr",
+				"name" : "ส่งเม็ดผลิตแท่ง",
+				"icon" : "fas fa-retweet",
+				"path" : "apps/production_pmr/index.php"
+			},{
+				"appname" : "stock",
+				"name" : "Stock",
+				"icon_type" : "feather",
+				"icon" : "box",
+				"path" : "apps/stock/index.php"
+			},{
+				"appname" : "stock_silver",
+				"name" : "Stock แท่งเงิน",
+				"icon" : "fas fa-exchange-alt",
+				"path" : "apps/stock_silver/index.php"
+			}
+		]
+	},{
+		"appname" : "receive",
+		"name" : "รับชำระเงิน",
+		"icon_type" : "feather",
+		"icon" : "dollar-sign",
+		"submenu" : [
+			{
+				"appname" : "finance",
+				"name" : "การชำระเงิน",
+				"icon" : "far fa-money-bill",
+				"path" : "apps/finance/index.php"
+			},{
+				"appname" : "import_combine",
+				"name" : "Import Split",
+				"icon" : "fa fa-upload",
+				"path" : "apps/import_combine/index.php"
+			},{
+				"appname" : "defer_split",
+				"name" : "Defered Splitter",
+				"icon" : "fa fa-cut",
+				"path" : "apps/defer_split/index.php"
+			},{
+				"appname" : "forward_contract",
+				"name" : "Contract",
+				"icon" : "far fa-history",
+				"path" : "apps/forward_contract/index.php"
+			},{
+				"appname" : "fundin_defer",
+				"name" : "Fund in - ปิด Defer",
+				"icon" : "far fa-history",
+				"path" : "apps/defer_adjust/index.php"
+			},{
+				"appname" : "prepare_to_pay",
+				"name" : "เตรียมชำระเงิน",
+				"icon" : "far fa-clipboard-check",
+				"path" : "apps/prepare_to_pay/index.php"
+			},{
+				"appname" : "trust_receipt",
+				"name" : "Trust Receipt",
+				"icon" : "far fa-folder-open",
+				"path" : "apps/trust_receipt/index.php"
+			},{
+				"appname" : "trust_receipt7days",
+				"name" : "Trust Receipt 7 Days",
+				"icon" : "far fa-folder-open",
+				"path" : "apps/trust_receipt7days/index.php"
+			},{
+				"appname" : "sigmargin",
+				"name" : "SigMargin-STD",
+				"icon" : "far fa-folder-open",
+				"path" : "apps/sigmargin/index.php"
+			},{
+				"appname" : "sigmargin_stx",
+				"name" : "SigMargin-STX",
+				"icon" : "far fa-folder-open",
+				"path" : "apps/sigmargin_stx/index.php"
+			},{
+				"appname" : "bank",
+				"name" : "Statement",
+				"icon" : "far fa-dollar-sign",
+				"path" : "apps/bank/index.php"
+			},{
+				"appname" : "rate_exchange",
+				"name" : "Rate Exchange",
+				"icon_type" : "feather",
+				"icon" : "dollar-sign",
+				"path" : "apps/rate_exchange/index.php"
+			}
+		]
+	},{
+		"appname" : "main",
+		"name" : "ข้อมูลหลัก",
+		"icon_type" : "feather",
+		"icon" : "home",
+		"submenu" : [
+			{
+				"appname" : "customer",
+				"name" : "Customer",
+				"icon_type" : "feather",
+				"icon" : "users",
+				"path" : "apps/customer/index.php"
+			},{
+				"appname" : "supplier",
+				"name" : "Supplier",
+				"icon" : "far fa-users",
+				"path" : "apps/supplier/index.php"
+			},{
+				"appname" : "employee",
+				"name" : "Employee",
+				"icon" : "far fa-newspaper",
+				"path" : "apps/employee/index.php"
+			}
+		]
+	},{
+		"appname" : "report",
+		"name" : "รายงาน",
+		"icon" : "far fa-chart-bar",
+		"submenu" : [
+			{
+				"appname" : "report",
+				"name" : "รายงาน",
+				"icon" : "far fa-chart-line",
+				"path" : "apps/report/index.php"
+			},{
+				"appname" : "report_bwd",
+				"name" : "รายงาน Bowins Design",
+				"icon" : "far fa-chart-pie",
+				"path" : "apps/report_bwd/index.php"
+			},{
+				"appname" : "report_sale",
+				"name" : "รายงานการขาย",
+				"icon" : "far fa-chart-pie",
+				"path" : "apps/report_sales/index.php"
+			},{
+				"appname" : "report_stock",
+				"name" : "รายงาน Stock",
+				"icon" : "fas fa-warehouse",
+				"path" : "apps/report_stock/index.php"
+			},{
+				"appname" : "report_transport",
+				"name" : "รายงานขนส่ง",
+				"icon" : "fas fa-truck",
+				"path" : "apps/report_transport/index.php"
+			},{
+				"appname" : "report_financial",
+				"name" : "รายงานดอกเบี้ย TR",
+				"icon" : "far fa-chart-bar",
+				"path" : "apps/report_financial/index.php"
+			},{
+				"appname" : "report_sigmargin",
+				"name" : "รายงานดอกเบี้ย STD",
+				"icon" : "far fa-chart-bar",
+				"path" : "apps/report_sigmargin/index.php"
+			},{
+				"appname" : "report_sigmargin_stx",
+				"name" : "รายงานดอกเบี้ย STX",
+				"icon" : "far fa-chart-bar",
+				"path" : "apps/report_sigmargin_stx/index.php"
+			},{
+				"appname" : "report_match",
+				"name" : "รายงานการ Match",
+				"icon" : "far fa-link",
+				"path" : "apps/report_match/index.php"
+			},{
+				"appname" : "report_trustreceipt",
+				"name" : "รายงาน TR",
+				"icon_type" : "feather",
+				"icon" : "dollar-sign",
+				"path" : "apps/report_trustreceipt/index.php"
+			},{
+				"appname" : "report_production",
+				"name" : "รายงานการผลิต",
+				"icon" : "fas fa-industry",
+				"path" : "apps/report_production/index.php"
+			}
+		]
+	},{
+		"appname" : "audit",
+		"name" : "Audit",
+		"icon" : "fas fa-cogs",
+		"path" : "apps/audit/index.php"
+	},{
+		"appname" : "claim",
+		"icon_type" : "feather",
+		"icon" : "command",
+		"name" : "การเคลมสินค้า",
+		"submenu" : [
+			{
+				"appname" : "claim",
+				"name" : "แจ้งเพื่อเคลมสินค้า",
+				"icon_type" : "feather",
+				"icon" : "message-circle",
+				"path" : "apps/claim/index.php"
+			}
+		]
+	},{
+		"appname" : "admin",
+		"icon_type" : "feather",
+		"icon" : "command",
+		"name" : "Administration",
+		"submenu" : [
+			{
+				"appname" : "setting",
+				"name" : "Setting",
+				"icon_type" : "feather",
+				"icon" : "settings",
+				"path" : "apps/setting/index.php"
+			},{
+				"appname" : "accctrl",
+				"name" : "Access Control",
+				"icon_type" : "feather",
+				"icon" : "users",
+				"path" : "apps/accctrl/index.php"
+			},{
+				"appname" : "database",
+				"name" : "Database",
+				"icon_type" : "feather",
+				"icon" : "database",
+				"path" : "apps/database/index.php"
+			},{
+				"appname" : "zystem",
+				"name" : "Zystem",
+				"icon_type" : "feather",
+				"icon" : "settings",
+				"path" : "apps/zystem/index.php"
+			}
+		]
+	}
+]
