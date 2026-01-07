@@ -5,9 +5,9 @@ if [ -z "$comment" ];then
   echo "Please input comment with ./commit.sh test";
 
 else
- echo "git comment";
+ echo "git comment $comment & upload";
  git add  .
- git push
  git commit -m "$1"
+ git push
 
 fi
