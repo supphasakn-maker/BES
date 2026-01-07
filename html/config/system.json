@@ -1,0 +1,49 @@
+{
+	"info" : {
+		"version" : "1.0",
+		"updated" : "2018-02-20",
+		"name" : "OCEANOS"
+	},
+	"themes" : [
+		{
+			"name" : "Default",
+			"class" : ""
+		},{
+			"name" : "Dark Elegance",
+			"class" : "smart-style-1"
+		},{
+			"name" : "Ultra Light",
+			"class" : "smart-style-2"
+		},{
+			"name" : "Google Skin",
+			"class" : "smart-style-3"
+		},{
+			"name" : "PixelSmash",
+			"class" : "smart-style-4"
+		},{
+			"name" : "Glass",
+			"class" : "smart-style-5"
+		},{
+			"name" : "Material Design (Beta)",
+			"class" : "smart-style-6"
+		},{
+			"name" : "Sing Business",
+			"class" : "smart-style-sing"
+		}
+	],
+	"language" : [
+		{
+			"code" : "en",
+			"name" : "English",
+			"icon" : "flag flag-us"
+		},{
+			"code" : "th",
+			"name" : "ภาษาไทย",
+			"icon" : "flag flag-th"
+		},{
+			"code" : "cn",
+			"name" : "中文",
+			"icon" : "flag flag-cn"
+		}
+	]
+}

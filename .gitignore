@@ -1,7 +1,3 @@
-config/
-binary/
-css/
-font/
-img/db/erp_main.sql
+db/erp_main.sql
 git.sh
 canclegit.sh
