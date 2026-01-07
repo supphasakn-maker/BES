@@ -1,6 +1,0 @@
-<div id="footer">
-    <p>
-        <a href="https://www.hesk.com" target="_blank">Help Desk Software</a>
-        Powered by <a href="https://www.hesk.com" target="_blank">HESK</a>
-    </p>
-</div>
